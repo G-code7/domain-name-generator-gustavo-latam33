@@ -1,1 +1,19 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  background-color: #bcd7f2;
+}
+.container {
+  margin-top: 50px;
+}
+.domain-list {
+  margin-top: 20px;
+}
+.domain-item {
+  background-color: #ffffff;
+  border: 1px solid #c2d3e4;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 5px;
+  font-family: "Courier New", Courier, monospace;
+}
