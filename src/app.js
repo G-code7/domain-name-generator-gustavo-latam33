@@ -17,11 +17,11 @@ function generateDomains() {
   let domainList = document.getElementById("domain-list");
   domainList.innerHTML = "";
 
-  for (let pronounList of pronoun) {
-    for (let adjList of adj) {
-      for (let nounList of noun) {
+  for (let pronounItem of pronoun) {
+    for (let adjItem of adj) {
+      for (let nounItem of noun) {
         for (let ext of extensions) {
-          let domain = pronounList + adjList + nounList + ext;
+          let domain = pronounItem + adjItem + nounItem + ext;
           console.log(domain);
           let div = document.createElement("div");
           div.className = "domain-item";
@@ -33,14 +33,14 @@ function generateDomains() {
   }
 
   // combinaciones de domain hacks
-  for (let p of pronoun) {
-    for (let a of adj) {
-      for (let n of noun) {
+  for (let pronounItem of pronoun) {
+    for (let adjItem of adj) {
+      for (let nounItem of noun) {
         for (let hack of domainHacks) {
-          if (n.endsWith(hack)) {
+          if (nounItem.endsWith(hack)) {
             let hackedDomain =
-              n.substring(0, n.length - hack.length) + "." + hack;
-            let domain = p + a + hackedDomain;
+              nounItem.substring(0, nounItem.length - hack.length) + "." + hack;
+            let domain = pronounItem + adjItem + hackedDomain;
             console.log(domain);
             let div = document.createElement("div");
             div.className = "domain-item";
